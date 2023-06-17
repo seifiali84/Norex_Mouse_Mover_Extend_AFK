@@ -10,11 +10,11 @@ namespace Norex_Mouse_Mover_Extend_AFK
         }
         private void StartMoving()
         {
-
+            timer1.Start();
         }
         private void StopMoving()
         {
-
+            timer1.Stop();
         }
         bool Start = false;
         private void button1_Click(object sender, EventArgs e)
@@ -34,6 +34,11 @@ namespace Norex_Mouse_Mover_Extend_AFK
         private void timer1_Tick(object sender, EventArgs e)
         {
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            RegisterHotKey(Keys.K, KeyModifiers.Control | KeyModifiers.Alt);
         }
     }
 }
